@@ -1,6 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './App'
 
-ReactDOM.render(<h1>Hola Dariio</h1>,
+//utilizar el componente
+
+
+ReactDOM.render( <App></App>,
     document.getElementById('root')
     )
