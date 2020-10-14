@@ -1,12 +1,19 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Result = () =>{
-    return(
+const Result = ({value}) =>(
         <div className="result"> 
-        <span>10</span>
+        {value}
         </div>
     )
+
+
+Result.propTypes = {
+    value: PropTypes.string.isRequired
 }
 
+Result.defaultProps = {
+    value: "0"
+}
 export default Result

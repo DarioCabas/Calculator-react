@@ -1,17 +1,22 @@
 import React from 'react'
-import './App.css'
-import './Components/Result'
 import Result from './Components/Result'
+import Button from './Components/Button'
+import './Components/Result'
+import './App.css'
+
+
 
 
 const App = () => {
-
+    const clickHandlerFunction = text => {
+        console.log("Button.clickHandler1", text)
+    }
     console.log("Renderizacion app")
     return (
         <main className='react-calculator'>
-                <Result />
+                <Result value={undefined} />
                 <div className="numbers" >
-                    <button > 1 </button> 
+                    <Button text={"1"} clickHandler={clickHandlerFunction}/> 
                     <button > 2 </button> 
                     <button > 3 </button> 
                     <button > 4 </button> 
