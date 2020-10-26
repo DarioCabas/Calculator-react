@@ -1,15 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { isCompositeComponent } from 'prop-types'
 import Button from './Button'
-import App from '../App'
 
-const MathOperation = ({onClickOperation, onClickEqual}) => (
+
+const MathOperations = ({onClickOperation, onClickEqual}) => (
+    <section className="math-operations">
+    <Button text="+" clickHandler={onClickOperation}/>
+    <Button text="-" clickHandler={onClickOperation}/>
+    <Button text="*" clickHandler={onClickOperation}/>
+    <Button text="/" clickHandler={onClickOperation}/>
+    <Button text="=" clickHandler={onClickEqual}/>
+    </section>
 )
 
-MathOperation.propTypes ={
+MathOperations.propTypes ={
     onClickOperation: PropTypes.func.isRequired,
     onClickEqual: PropTypes.func.isRequired
 }
 
-export default App
+export default MathOperations
